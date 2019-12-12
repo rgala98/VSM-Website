@@ -3,3 +3,20 @@
     padding: 25rem 0;
     margin-top: -20vh;
 }
+
+.section-explore{
+    padding: 10rem 0;
+    background-color: $color-grey-light-1;
+    background-image: linear-gradient(
+        to right bottom,
+            rgba(#c31432, 0.8),
+            rgba(#240b36, 0.8)),
+          url('../img/explore-bg-img.jpg');
+    background-size: cover;
+    transform: skewY(-5deg);
+
+
+    & > *{
+        transform: skewY(5deg);
+    }
+}
