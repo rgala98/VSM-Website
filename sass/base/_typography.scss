@@ -38,7 +38,7 @@ body{
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
-    background-image: linear-gradient(to right, #4568DC, #B06AB3);
+    background-image: linear-gradient(to right, $color-secondary-purple, $color-secondary-pink);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -48,6 +48,10 @@ body{
     &:hover{
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+    
+    &-white{
+        background-image: linear-gradient(to right, $color-white, $color-white);
     }
 
 }
@@ -58,32 +62,8 @@ body{
     &:not(:last-child){
         margin-bottom: 3rem;
     }
-}
 
-.paragraph-explore{
-    font-size: 2rem;
-    color: $color-white;
-
-    &:not(:last-child){
-        margin-bottom: 3rem;
+    &-white{
+        color: $color-white;
     }
-}
-
-.heading-secondary{
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: inline-block;
-    background-image: linear-gradient(to right, $color-white, $color-white);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: 2px;
-    transition: all .2s;
-
-    &:hover{
-        transform: skewY(2deg) skewX(15deg) scale(1.1);
-        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
-    }
-
 }

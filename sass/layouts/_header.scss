@@ -3,8 +3,8 @@
 
     background-image: linear-gradient(
         to right bottom,
-            rgba(#c31432, .8),
-            rgba(#240b36, .8)),
+            rgba($color-primary-red, .8),
+            rgba($color-primary-violet, .8)),
           url('../img/main-img.jpg');
 
     background-size: cover;
