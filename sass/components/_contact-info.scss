@@ -1,0 +1,38 @@
+.contact-info{
+
+    margin-top: 16rem;
+    &__icon{
+    
+
+        &,
+        &:link,
+        &:visited{
+            text-decoration: none;
+            padding: 1.5rem 4rem;
+            width: 100%;
+            text-align: left;
+            display: inline-block;
+            font-size: 3rem;
+            transition: all .2s;
+            color: transparent;
+            background-image: linear-gradient(to right, $color-secondary-purple, $color-secondary-pink);
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            span{
+                color: red;
+            }
+        }
+
+        &:hover,
+        &:active{
+            transform: rotate(-5deg);
+        }
+    }
+}
+
+.fa-gradient {
+	background-image: linear-gradient(to right, $color-secondary-purple, $color-secondary-pink);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,33 @@
+.footer{
+    
+
+    &__text{
+        background-color: $color-black-light;
+        padding: 1rem 0;
+        margin: 0 -3rem;
+
+        p{
+            color: white;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__link{
+        
+        &,
+        &:visited,
+        &:link{
+            text-decoration: none underline;
+            font-weight: bolder;
+
+            
+            color: white;
+            // background-image: linear-gradient(to right, $color-secondary-purple, $color-secondary-pink);
+            // -webkit-background-clip: text;
+            // background-clip: text;
+        }
+    }
+
+
+}
