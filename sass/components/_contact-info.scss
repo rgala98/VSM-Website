@@ -1,8 +1,11 @@
 .contact-info{
 
     margin-top: 16rem;
+
+    @include respond(tab-port){
+        margin-top: 8rem;
+    }
     &__icon{
-    
 
         &,
         &:link,
@@ -21,7 +24,20 @@
 
             span{
                 color: red;
+            
             }
+
+            @include respond(tab-port){
+                padding: 1rem 0;
+                font-size: 2.5rem;
+            }
+
+            @include respond(phone){
+                padding: .5rem 0;
+                font-size: 2rem;
+            }
+
+            
         }
 
         &:hover,
@@ -33,6 +49,7 @@
 
 .fa-gradient {
 	background-image: linear-gradient(to right, $color-secondary-purple, $color-secondary-pink);
-	-webkit-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

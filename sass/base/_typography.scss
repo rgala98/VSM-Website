@@ -4,7 +4,7 @@ body{
     line-height: 1.7;
     color: $color-black-light;
     background-color: $color-grey-light-1;
-    padding: 3rem 3rem 0 3rem;
+
 }
 
 .heading-primary{
@@ -21,6 +21,11 @@ body{
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-size: 2rem;
+        }
     }
 
     &--sub{
@@ -29,6 +34,11 @@ body{
         font-weight: 700;
         letter-spacing: 1.7rem;
         animation: moveInRight 1s ease-out;
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+            font-size: 1rem;
+        }
     
     }
 }
@@ -54,16 +64,27 @@ body{
         background-image: linear-gradient(to right, $color-white, $color-white);
     }
 
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+
 }
 
 .paragraph{
-    font-size: 2rem;
-    
+    font-size: 3rem;
+
+    @include respond(tab-port){
+        font-size: 2rem;
+    }
     &:not(:last-child){
         margin-bottom: 3rem;
     }
-
     &-white{
         color: $color-white;
+        text-align: center;
     }
 }

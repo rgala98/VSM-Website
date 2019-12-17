@@ -5,3 +5,60 @@
         clear: both;
       }
 }
+
+@mixin absCenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px: Phone
+600 - 900px: Tablet in potrait mode
+900 - 1200px: Tablet in landscape mode
+1200 - 1800px: normal styles of desktop
+1800px ++ : Big Desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16 px
+
+ORDER: BASE + Typography > general layout + grid > page layout > components
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone{
+    @media only screen and (max-width: 37.6em){@content;}   //600px
+  }
+
+  @if $breakpoint == tab-port{
+    @media  only screen and (max-width: 56.25em){@content;}  //900px
+  }
+
+  @if $breakpoint == tab-land{
+    @media only screen and (max-width: 75em){@content;} //1200px
+  }
+
+  @if $breakpoint == big-desktop{
+    @media only screen and (min-width: 112.5em){@content;} //1800px
+  }
+
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */
+}

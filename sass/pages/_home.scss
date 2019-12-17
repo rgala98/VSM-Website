@@ -2,6 +2,10 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -20vh;
+
+    @include respond (tab-port){
+        padding: 20rem 0;
+    }
 }
 
 .section-explore{
@@ -19,9 +23,17 @@
     & > *{
         transform: skewY(5deg);
     }
+
+    @include respond (tab-port){
+        padding: 5rem 0;
+    }
 }
 
 .section-reach-us{
     padding: 10rem 0;
+
+    @include respond (tab-port){
+        padding: 5rem 0;
+    }
     
 }

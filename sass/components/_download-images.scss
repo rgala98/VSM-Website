@@ -1,17 +1,20 @@
 .download-images{
-    position: relative;
+    // position: relative;
     height: 50rem;
 
     &__qr{
-        height: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        
+        margin-left: 50%;
+        transform: translateX(-50%);
+        // position: absolute;
+        // top:0;
+        // left: 50%;
     
     }
 
     &__mobile{
+        margin-left: 50%;
+        transform: translateX(-50%);
         height: 30%;
         margin-top: 8rem;
     }
