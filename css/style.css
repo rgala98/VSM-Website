@@ -126,7 +126,17 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
   .heading-primary--main {
     display: block;
     font-size: 4rem;
@@ -147,8 +157,7 @@ body {
   */ }
     @media only screen and (max-width: 37.6em) {
       .heading-primary--main {
-        letter-spacing: 1rem;
-        font-size: 2rem; } }
+        letter-spacing: 1rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -167,8 +176,8 @@ body {
   */ }
     @media only screen and (max-width: 37.6em) {
       .heading-primary--sub {
-        letter-spacing: .5rem;
-        font-size: 1rem; } }
+        letter-spacing: .7rem;
+        margin-top: 10rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -303,9 +312,10 @@ body {
   */ }
     @media only screen and (max-width: 56.25em) {
       .composition__photo {
+        margin-top: 5rem;
         float: left;
         position: relative;
-        width: 30%;
+        width: 33.33333%;
         box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); } }
     .composition__photo--p1 {
       left: 10%;
@@ -323,7 +333,7 @@ body {
       @media only screen and (max-width: 56.25em) {
         .composition__photo--p1 {
           top: 0;
-          transform: scale(1.2); } }
+          transform: scale(1.5); } }
     .composition__photo--p2 {
       left: 50%;
       top: 2rem;
@@ -341,7 +351,7 @@ body {
         .composition__photo--p2 {
           left: 0;
           top: -1rem;
-          transform: scale(1.3);
+          transform: scale(1.6);
           z-index: 100; } }
     .composition__photo--p3 {
       left: 25%;
@@ -360,7 +370,7 @@ body {
         .composition__photo--p3 {
           left: -1rem;
           top: 0;
-          transform: scale(1.1); } }
+          transform: scale(1.4); } }
     .composition__photo:hover {
       outline: 1.5rem solid #B06AB3;
       transform: scale(1.05) translateY(-0.5rem);
@@ -475,7 +485,7 @@ body {
   */ }
   @media only screen and (max-width: 56.25em) {
     .contact-info {
-      margin-top: 8rem; } }
+      margin-top: 1rem; } }
   .contact-info__icon, .contact-info__icon:link, .contact-info__icon:visited {
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -722,8 +732,8 @@ body {
       right: 4.5rem; } }
   @media only screen and (max-width: 37.6em) {
     .navigation__background {
-      top: 3rem;
-      right: 3rem; } }
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
