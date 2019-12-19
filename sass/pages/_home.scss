@@ -30,10 +30,33 @@
 }
 
 .section-reach-us{
+    background-color: $color-grey-light-1;
     padding: 10rem 0;
 
     @include respond (tab-port){
         padding: 5rem 0;
     }
     
+}
+
+.section-slideshow{
+    background-color: $color-grey-light-1;
+}
+
+.logo_container{
+    width: 100%;
+
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+
+    &__vsm_sarees_logo{
+        width: 25rem;
+        // margin: 0 auto;
+    }
+
+    &__omjin_logo{
+        width: 25rem;
+        // margin: 0 auto;
+    }
 }

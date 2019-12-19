@@ -22,6 +22,26 @@
             return false;
 
         }
+
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 4000); // Change image every 2 seconds
+        }
     
     </script>
 </head>
@@ -62,6 +82,8 @@
 
     <main>
 
+
+
         <section class="section-about" id="about">
 
             <div class="u-center-text u-margin-bottom-big">
@@ -73,12 +95,29 @@
             <div class="row">
                 <div class="col-1-of-2">
                     <p class="paragraph">
-                        VSM's business concept is to provide fashion and quality at the best rate possible. It was estblished in the year 2002. Relentlessly innovating since the day of estblishment has not only helped us survive in the highly competitive market but also allowed us to grow! We provide all types of weaving sarees to cater all women across different cities.  
+                        VSM's business concept is to provide fashion and quality at the best rate possible. It was established in the year 2002. Relentlessly innovating since the day of estblishment has not only helped us survive in the highly competitive market but also allowed us to grow! We provide all types of weaving sarees to cater all women across different cities.  
                     </p>
                     
-                    <p class="paragraph">
-                            VSM's business concept is to provide fashion and quality at the best rate possible. It was estblished in the year 2002. Relentlessly innovating since the day of estblishment has not only helped us survive in the highly competitive market but also allowed us to grow! We provide all types of weaving sarees to cater all women across different cities.  
-                    </p>
+                    <div class="row">
+                        <div class="col-1-of-2">
+                            <div class="logo_container">
+                                <img src="img/vsm_sarees_logo.png" alt="VSM Sarees Logo" class="logo_container__vsm_sarees_logo">
+                            </div>
+                            <p class="paragraph logo_container_para">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veniam animi officiis accusantium repellat. Est impedit 
+                            </p>
+                        </div>
+                        <div class="col-1-of-2">
+                            <div class="logo_container logo_container__para">
+                                <img src="img/omgin-logo.png" alt="Omjin Logo" class="logo_container__omjin_logo">
+                            </div>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veniam animi officiis accusantium repellat. Est impedit 
+                            </p>
+                        </div>
+                    
+                    </div>
+                    
                 </div>
 
                 <div class="col-1-of-2">
@@ -109,14 +148,17 @@
 
                 <div class="col-1-of-3">
                     <p class="paragraph paragraph-white">
-                        Please download the app to explore exclusive content.
+                        Exclusive mobile app designed for distributor and retailers across India.<br><br>
+                        -> Browse through all our catalogues and easily place an order or enquire about the product.<br><br>
+                        -> Add to cart and enquire/order multiple catalogues at a time
+                    
                     </p>
                 </div>
 
                 <div class="col-1-of-3">
                     <div class="download-images">
                         <img src="img/QR_ILAAKA.png" alt="QR CODE" class="download-images__qr" >
-                        <a href="http://onelink.to/t7nvyt">
+                        <a href="http://onelink.to/t7nvyt" target="_blank" >
                             <img src="img/play-app-store.png" alt="Download from App/Play Store" class="download-images__mobile">
                         </a>
                     </div>
@@ -154,9 +196,13 @@
                         <a href="mailto:jineshjain9fy@gmail.com" class="contact-info__icon">
                             <i class="fa fa-envelope fa-gradient u-margin-right-small" aria-hidden="true"></i>
                             jineshjain9fy@gmail.com</a>
-                        <a href="https://www.instagram.com/visionsilkmills/" class="contact-info__icon">
+                        <a href="https://www.instagram.com/visionsilkmills/" target="_blank" class="contact-info__icon">
                             <i class="fa fa-instagram fa-gradient u-margin-right-small" aria-hidden="true"></i>
                             @visionsilkmills</a>
+                        </a>
+                        <a href="https://www.google.com/maps/place/Vision+Silk+Mills/@21.1865096,72.8384821,17z/data=!3m1!4b1!4m5!3m4!1s0x3be04e51df522dbb:0x3a4556d9ff4ff5a6!8m2!3d21.1865096!4d72.8406708"  target="_blank" class="contact-info__icon">
+                            <i class="fa fa-map-marker fa-gradient u-margin-right-small" aria-hidden="true"></i>
+                            H-13, Surat Textile Market, Ring Road, Surat, Gujarat - 395002</a>
                         </a>
                     </div>
                 </div>
@@ -169,8 +215,8 @@
     <footer class="footer">
         <div class="footer__text">
             <p>
-                &copy;Website Copyright <a href="https://www.replon.com" class="footer__link">Replon Technologies</a>. All Rights Reserved.<br>
-                Designed and Developed by <a href="https://www.replon.com" class="footer__link">Replon Technologies</a>
+                &copy;Website Copyright <a href="https://www.replon.com" target="_blank" class="footer__link">Replon Technologies</a>. All Rights Reserved.<br>
+                Designed and Developed by <a href="https://www.replon.com" target="_blank" class="footer__link">Replon Technologies</a>
 
             </p>
         </div>

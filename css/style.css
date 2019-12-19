@@ -223,7 +223,8 @@ body {
       font-size: 2.5rem; } }
 
 .paragraph {
-  font-size: 3rem;
+  font-size: 2rem;
+  text-align: justify;
   /*
     Media Queries are not affected by the root font-szie
     So if user has default size as 20 then 1rem - 20px
@@ -240,8 +241,22 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
   .paragraph-white {
+    margin-top: 8rem;
     color: #fff;
-    text-align: center; }
+    text-align: justify;
+    /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+    @media only screen and (max-width: 56.25em) {
+      .paragraph-white {
+        margin-top: 3rem; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -291,7 +306,8 @@ body {
   margin-right: 2rem !important; }
 
 .composition {
-  position: relative; }
+  position: relative;
+  margin-top: 10rem; }
   .composition__photo {
     width: 60%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
@@ -390,6 +406,7 @@ body {
     transform: translate(-50%, -50%); }
 
 .download-images {
+  margin-top: 7rem;
   height: 50rem; }
   .download-images__qr {
     margin-left: 50%;
@@ -472,7 +489,7 @@ body {
   transform: translateY(0); }
 
 .contact-info {
-  margin-top: 16rem;
+  margin-top: 5rem;
   /*
     Media Queries are not affected by the root font-szie
     So if user has default size as 20 then 1rem - 20px
@@ -528,7 +545,7 @@ body {
       .contact-info__icon, .contact-info__icon:link, .contact-info__icon:visited {
         padding: .5rem 0;
         font-size: 2rem; } }
-  .contact-info__icon:hover, .contact-info__icon:active {
+  .contact-info__icon:hover {
     transform: rotate(-5deg); }
 
 .fa-gradient {
@@ -728,8 +745,8 @@ body {
   */ }
   @media only screen and (max-width: 56.25em) {
     .navigation__background {
-      top: 4.5rem;
-      right: 4.5rem; } }
+      top: 4rem;
+      right: 4rem; } }
   @media only screen and (max-width: 37.6em) {
     .navigation__background {
       top: 3.5rem;
@@ -889,6 +906,7 @@ body {
       padding: 5rem 0; } }
 
 .section-reach-us {
+  background-color: #f7f7f7;
   padding: 10rem 0;
   /*
     Media Queries are not affected by the root font-szie
@@ -903,3 +921,16 @@ body {
   @media only screen and (max-width: 56.25em) {
     .section-reach-us {
       padding: 5rem 0; } }
+
+.section-slideshow {
+  background-color: #f7f7f7; }
+
+.logo_container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block; }
+  .logo_container__vsm_sarees_logo {
+    width: 25rem; }
+  .logo_container__omjin_logo {
+    width: 25rem; }
