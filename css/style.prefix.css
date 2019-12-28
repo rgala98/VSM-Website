@@ -1,0 +1,1035 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet in potrait mode
+900 - 1200px: Tablet in landscape mode
+1200 - 1800px: normal styles of desktop
+1800px ++ : Big Desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16 px
+
+ORDER: BASE + Typography > general layout + grid > page layout > components
+
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem 3rem 0 3rem;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+::-moz-selection {
+  background-color: #B06AB3;
+  color: #fff; }
+
+::selection {
+  background-color: #B06AB3;
+  color: #fff; }
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem); }
+  80% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem); }
+  80% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0); } }
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem); }
+  80% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem); }
+  80% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0); } }
+
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #1F1F1F;
+  background-color: #f7f7f7; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  margin-bottom: 6rem;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  .heading-primary--main {
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 3rem;
+    -webkit-animation-name: moveInLeft;
+            animation-name: moveInLeft;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+    @media only screen and (max-width: 37.6em) {
+      .heading-primary--main {
+        letter-spacing: 1rem; } }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.7rem;
+    -webkit-animation: moveInRight 1s ease-out;
+            animation: moveInRight 1s ease-out;
+    /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+    @media only screen and (max-width: 37.6em) {
+      .heading-primary--sub {
+        letter-spacing: .7rem;
+        margin-top: 10rem; } }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#4568DC), to(#B06AB3));
+  background-image: linear-gradient(to right, #4568DC, #B06AB3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  .heading-secondary:hover {
+    -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .heading-secondary-white {
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: linear-gradient(to right, #fff, #fff); }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.6em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+
+.paragraph {
+  font-size: 2rem;
+  text-align: justify;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    .paragraph {
+      font-size: 2rem; } }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+  .paragraph-white {
+    margin-top: 8rem;
+    color: #fff;
+    text-align: justify;
+    /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+    @media only screen and (max-width: 56.25em) {
+      .paragraph-white {
+        margin-top: 3rem; } }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-top-huge {
+  margin-bottom: 10rem !important; }
+
+.u-margin-top-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-right-small {
+  margin-right: 2rem !important; }
+
+.composition {
+  position: relative;
+  margin-top: 5rem; }
+  .composition__photo {
+    width: 60%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    outline-offset: 2rem;
+    /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+    @media only screen and (max-width: 56.25em) {
+      .composition__photo {
+        margin-top: 5rem;
+        float: left;
+        position: relative;
+        width: 33.33333%;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); } }
+    .composition__photo--p1 {
+      left: 10%;
+      top: -2rem;
+      /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo--p1 {
+          top: 0;
+          -webkit-transform: scale(1.5);
+                  transform: scale(1.5); } }
+    .composition__photo--p2 {
+      left: 50%;
+      top: 2rem;
+      /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo--p2 {
+          left: 0;
+          top: -1rem;
+          -webkit-transform: scale(1.6);
+                  transform: scale(1.6);
+          z-index: 100; } }
+    .composition__photo--p3 {
+      left: 25%;
+      top: 5rem;
+      /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo--p3 {
+          left: -1rem;
+          top: 0;
+          -webkit-transform: scale(1.4);
+                  transform: scale(1.4); } }
+    .composition__photo:hover {
+      outline: 1.5rem solid #B06AB3;
+      -webkit-transform: scale(1.05) translateY(-0.5rem);
+              transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0, 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+
+.phone-img {
+  position: relative;
+  height: 50rem; }
+  .phone-img__iphone {
+    height: 50rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+
+.download-images {
+  margin-top: 7rem;
+  height: 50rem; }
+  .download-images__qr {
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .download-images__mobile {
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 30%;
+    margin-top: 8rem; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+            transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn--green {
+  background-color: #c31432;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #c31432; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .4s;
+  transition: all .4s; }
+
+.btn--animated {
+  -webkit-animation: moveInBottom .5s ease-out .75s;
+          animation: moveInBottom .5s ease-out .75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #c31432;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #c31432;
+  padding: 3px;
+  -webkit-transition: all .2s;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #c31432;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(0);
+          transform: translateY(0); }
+
+.contact-info {
+  margin-top: 5rem;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    .contact-info {
+      margin-top: 1rem; } }
+  .contact-info__icon, .contact-info__icon:link, .contact-info__icon:visited {
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    font-size: 3rem;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    color: transparent;
+    background-image: -webkit-gradient(linear, left top, right top, from(#4568DC), to(#B06AB3));
+    background-image: linear-gradient(to right, #4568DC, #B06AB3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */
+    /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+    .contact-info__icon span, .contact-info__icon:link span, .contact-info__icon:visited span {
+      color: red; }
+    @media only screen and (max-width: 56.25em) {
+      .contact-info__icon, .contact-info__icon:link, .contact-info__icon:visited {
+        padding: 1rem 0;
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 37.6em) {
+      .contact-info__icon, .contact-info__icon:link, .contact-info__icon:visited {
+        padding: .5rem 0;
+        font-size: 2rem; } }
+  .contact-info__icon:hover {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg); }
+
+.fa-gradient {
+  background-image: -webkit-gradient(linear, left top, right top, from(#4568DC), to(#B06AB3));
+  background-image: linear-gradient(to right, #4568DC, #B06AB3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.iframe {
+  width: 100%;
+  height: 50rem;
+  overflow: hidden;
+  border: 3px solid orangered;
+  border-radius: 1px; }
+
+.header {
+  height: 85vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(195, 20, 50, 0.8)), to(rgba(36, 11, 54, 0.8))), url("../img/main-img-small.jpg");
+  background-image: linear-gradient(to right bottom, rgba(195, 20, 50, 0.8), rgba(36, 11, 54, 0.8)), url("../img/main-img-small.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      height: 95vh; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
+    .header {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(195, 20, 50, 0.8)), to(rgba(36, 11, 54, 0.8))), url("../img/main-img.jpg");
+      background-image: linear-gradient(to right bottom, rgba(195, 20, 50, 0.8), rgba(36, 11, 54, 0.8)), url("../img/main-img.jpg"); } }
+  @media only screen and (max-width: 37.6em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%); } }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 10rem; }
+  .header__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 80rem;
+      padding: 0 3rem; } }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left;
+    /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem;
+      /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
+  @media only screen and (max-width: 37.6em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#c31432, #4568DC);
+  z-index: 1000;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__background {
+      top: 4rem;
+      right: 4rem; } }
+  @media only screen and (max-width: 37.6em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 250%;
+  -webkit-transition: all .4s;
+  transition: all .4s; }
+  .navigation__link:link span, .navigation__link:visited span {
+    margin-right: 1.5rem;
+    display: inline-block; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #4568DC;
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem); }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  -webkit-transition: all 0.8s cubic-bezier(0.6, -0.55, 0.265, 1.55);
+  transition: all 0.8s cubic-bezier(0.6, -0.55, 0.265, 1.55); }
+
+.navigation__list {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  -webkit-transform: scale(70);
+          transform: scale(70); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+  visibility: visible; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3.3rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__button:hover .navigation__icon:before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon:after {
+  top: 1rem; }
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg); }
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg); }
+
+.footer__text {
+  background-color: #1F1F1F;
+  padding: 1rem 0;
+  margin: 0 -3rem;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    .footer__text {
+      margin: 0 0; } }
+  .footer__text p {
+    color: white;
+    text-align: center;
+    font-size: 1.3rem; }
+
+.footer__link, .footer__link:visited, .footer__link:link {
+  text-decoration: none underline;
+  font-weight: bolder;
+  color: white; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    .section-about {
+      padding: 20rem 0; } }
+
+.section-explore {
+  padding: 10rem 0;
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(195, 20, 50, 0.8)), to(rgba(36, 11, 54, 0.8))), url("../img/explore-bg-img.jpg");
+  background-image: linear-gradient(to right bottom, rgba(195, 20, 50, 0.8), rgba(36, 11, 54, 0.8)), url("../img/explore-bg-img.jpg");
+  background-size: cover;
+  -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  .section-explore > * {
+    -webkit-transform: skewY(5deg);
+            transform: skewY(5deg); }
+  @media only screen and (max-width: 56.25em) {
+    .section-explore {
+      padding: 5rem 0; } }
+
+.section-reach-us {
+  background-color: #f7f7f7;
+  padding: 10rem 0;
+  /*
+    Media Queries are not affected by the root font-szie
+    So if user has default size as 20 then 1rem - 20px
+    
+    Also, by experimentation rems do not work very well in 
+    all the browsers so we use ems for media queries.
+
+    only screen makes media query apply only to screens
+    so if someone tries to copy it or print it out.. they wont apply
+  */ }
+  @media only screen and (max-width: 56.25em) {
+    .section-reach-us {
+      padding: 5rem 0; } }
+
+.section-slideshow {
+  background-color: #f7f7f7; }
+
+.logo_container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block; }
+  .logo_container__vsm_sarees_logo {
+    width: 25rem; }
+  .logo_container__omjin_logo {
+    width: 25rem; }
+
+/*# sourceMappingURL=data:application/json;base64,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RUFDTixpQ0FBeUI7VUFBekIseUJBQXlCLEVBQUU7O0FBRTdCO0VBQ0UsTUFBTTtFQUNOLGtDQUEwQjtVQUExQiwwQkFBMEIsRUFBRTs7QUFFOUI7RUFDRSx5QkFBeUI7RUFDekIsZUFBZTtFQUNmLGVBQWU7RUFDZjs7Ozs7Ozs7O0dBU0MsRUFBRTtFQUNIO0lBQ0U7TUFDRSxXQUFXLEVBQUUsRUFBRTtFQUNuQjtJQUNFLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsaUJBQWlCLEVBQUU7O0FBRXZCO0VBQ0UsK0JBQStCO0VBQy9CLG1CQUFtQjtFQUNuQixZQUFZLEVBQUU7O0FBRWhCO0VBQ0UseUJBQXlCO0VBQ3pCLGdCQUFnQjtFQUNoQixpQkFBaUI7RUFDakI7Ozs7Ozs7OztHQVNDLEVBQUU7RUFDSDtJQUNFO01BQ0UsZ0JBQWdCLEVBQUUsRUFBRTs7QUFFMUI7RUFDRSxnQkFBZ0I7RUFDaEIseUJBQXlCO0VBQ3pCLDZKQUFtSTtFQUFuSSxtSUFBbUk7RUFDbkksc0JBQXNCO0VBQ3RCLCtCQUF1QjtVQUF2Qix1QkFBdUI7RUFDdkI7Ozs7Ozs7OztHQVNDLEVBQUU7RUFDSDtJQUNFLDhCQUFzQjtZQUF0QixzQkFBc0IsRUFBRTtFQUMxQjtJQUNFO01BQ0UsZUFBZSxFQUFFLEVBQUU7O0FBRXpCO0VBQ0UseUJBQXlCO0VBQ3pCLGdCQUFnQjtFQUNoQjs7Ozs7Ozs7O0dBU0MsRUFBRTtFQUNIO0lBQ0U7TUFDRSxlQUFlLEVBQUUsRUFBRTs7QUFFekI7RUFDRSx5QkFBeUIsRUFBRTs7QUFFN0I7RUFDRSxXQUFXO0VBQ1gsY0FBYztFQUNkLGtCQUFrQjtFQUNsQixxQkFBcUIsRUFBRTtFQUN2QjtJQUNFLFlBQVksRUFBRTtFQUNoQjtJQUNFLFlBQVksRUFBRSIsImZpbGUiOiJzdHlsZS5wcmVmaXguY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcbjAgLSA2MDBweDogUGhvbmVcbjYwMCAtIDkwMHB4OiBUYWJsZXQgaW4gcG90cmFpdCBtb2RlXG45MDAgLSAxMjAwcHg6IFRhYmxldCBpbiBsYW5kc2NhcGUgbW9kZVxuMTIwMCAtIDE4MDBweDogbm9ybWFsIHN0eWxlcyBvZiBkZXNrdG9wXG4xODAwcHggKysgOiBCaWcgRGVza3RvcFxuXG4kYnJlYWtwb2ludCBhcmd1ZW1lbnQgY2hvaWNlczpcbi0gcGhvbmVcbi0gdGFiLXBvcnRcbi0gdGFiLWxhbmRcbi0gYmlnLWRlc2t0b3BcblxuMWVtID0gMTYgcHhcblxuT1JERVI6IEJBU0UgKyBUeXBvZ3JhcGh5ID4gZ2VuZXJhbCBsYXlvdXQgKyBncmlkID4gcGFnZSBsYXlvdXQgPiBjb21wb25lbnRzXG5cbiovXG4qLFxuKjo6YWZ0ZXIsXG4qOjpiZWZvcmUge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIGJveC1zaXppbmc6IGluaGVyaXQ7IH1cblxuaHRtbCB7XG4gIGZvbnQtc2l6ZTogNjIuNSU7XG4gIHNjcm9sbC1iZWhhdmlvcjogc21vb3RoO1xuICAvKlxuICAgIE1lZGlhIFF1ZXJpZXMgYXJlIG5vdCBhZmZlY3RlZCBieSB0aGUgcm9vdCBmb250LXN6aWVcbiAgICBTbyBpZiB1c2VyIGhhcyBkZWZhdWx0IHNpemUgYXMgMjAgdGhlbiAxcmVtIC0gMjBweFxuICAgIFxuICAgIEFsc28sIGJ5IGV4cGVyaW1lbnRhdGlvbiByZW1zIGRvIG5vdCB3b3JrIHZlcnkgd2VsbCBpbiBcbiAgICBhbGwgdGhlIGJyb3dzZXJzIHNvIHdlIHVzZSBlbXMgZm9yIG1lZGlhIHF1ZXJpZXMuXG5cbiAgICBvbmx5IHNjcmVlbiBtYWtlcyBtZWRpYSBxdWVyeSBhcHBseSBvbmx5IHRvIHNjcmVlbnNcbiAgICBzbyBpZiBzb21lb25lIHRyaWVzIHRvIGNvcHkgaXQgb3IgcHJpbnQgaXQgb3V0Li4gdGhleSB3b250IGFwcGx5XG4gICovXG4gIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi9cbiAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqLyB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzVlbSkge1xuICAgIGh0bWwge1xuICAgICAgZm9udC1zaXplOiA1Ni4yNSU7IH0gfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICBodG1sIHtcbiAgICAgIGZvbnQtc2l6ZTogNTAlOyB9IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWluLXdpZHRoOiAxMTIuNWVtKSB7XG4gICAgaHRtbCB7XG4gICAgICBmb250LXNpemU6IDc1JTsgfSB9XG5cbmJvZHkge1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICBwYWRkaW5nOiAzcmVtIDNyZW0gMCAzcmVtO1xuICAvKlxuICAgIE1lZGlhIFF1ZXJpZXMgYXJlIG5vdCBhZmZlY3RlZCBieSB0aGUgcm9vdCBmb250LXN6aWVcbiAgICBTbyBpZiB1c2VyIGhhcyBkZWZhdWx0IHNpemUgYXMgMjAgdGhlbiAxcmVtIC0gMjBweFxuICAgIFxuICAgIEFsc28sIGJ5IGV4cGVyaW1lbnRhdGlvbiByZW1zIGRvIG5vdCB3b3JrIHZlcnkgd2VsbCBpbiBcbiAgICBhbGwgdGhlIGJyb3dzZXJzIHNvIHdlIHVzZSBlbXMgZm9yIG1lZGlhIHF1ZXJpZXMuXG5cbiAgICBvbmx5IHNjcmVlbiBtYWtlcyBtZWRpYSBxdWVyeSBhcHBseSBvbmx5IHRvIHNjcmVlbnNcbiAgICBzbyBpZiBzb21lb25lIHRyaWVzIHRvIGNvcHkgaXQgb3IgcHJpbnQgaXQgb3V0Li4gdGhleSB3b250IGFwcGx5XG4gICovIH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA1Ni4yNWVtKSB7XG4gICAgYm9keSB7XG4gICAgICBwYWRkaW5nOiAwOyB9IH1cblxuOjpzZWxlY3Rpb24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjQjA2QUIzO1xuICBjb2xvcjogI2ZmZjsgfVxuXG5Aa2V5ZnJhbWVzIG1vdmVJbkxlZnQge1xuICAwJSB7XG4gICAgb3BhY2l0eTogMDtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTEwcmVtKTsgfVxuICA4MCUge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgxcmVtKTsgfVxuICAxMDAlIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKDApOyB9IH1cblxuQGtleWZyYW1lcyBtb3ZlSW5SaWdodCB7XG4gIDAlIHtcbiAgICBvcGFjaXR5OiAwO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgxMHJlbSk7IH1cbiAgODAlIHtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTFyZW0pOyB9XG4gIDEwMCUge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCk7IH0gfVxuXG5Aa2V5ZnJhbWVzIG1vdmVJbkJvdHRvbSB7XG4gIDAlIHtcbiAgICBvcGFjaXR5OiAwO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgzcmVtKTsgfVxuICAxMDAlIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKDApOyB9IH1cblxuYm9keSB7XG4gIGZvbnQtZmFtaWx5OiBcIkxhdG9cIiwgc2Fucy1zZXJpZjtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgbGluZS1oZWlnaHQ6IDEuNztcbiAgY29sb3I6ICMxRjFGMUY7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmN2Y3Zjc7IH1cblxuLmhlYWRpbmctcHJpbWFyeSB7XG4gIGNvbG9yOiAjZmZmO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBiYWNrZmFjZS12aXNpYmlsaXR5OiBoaWRkZW47XG4gIG1hcmdpbi1ib3R0b206IDZyZW07XG4gIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICAuaGVhZGluZy1wcmltYXJ5LS1tYWluIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBmb250LXNpemU6IDRyZW07XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBsZXR0ZXItc3BhY2luZzogM3JlbTtcbiAgICBhbmltYXRpb24tbmFtZTogbW92ZUluTGVmdDtcbiAgICBhbmltYXRpb24tZHVyYXRpb246IDFzO1xuICAgIGFuaW1hdGlvbi10aW1pbmctZnVuY3Rpb246IGVhc2Utb3V0O1xuICAgIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogMzcuNmVtKSB7XG4gICAgICAuaGVhZGluZy1wcmltYXJ5LS1tYWluIHtcbiAgICAgICAgbGV0dGVyLXNwYWNpbmc6IDFyZW07IH0gfVxuICAuaGVhZGluZy1wcmltYXJ5LS1zdWIge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIGZvbnQtc2l6ZTogMnJlbTtcbiAgICBmb250LXdlaWdodDogNzAwO1xuICAgIGxldHRlci1zcGFjaW5nOiAxLjdyZW07XG4gICAgYW5pbWF0aW9uOiBtb3ZlSW5SaWdodCAxcyBlYXNlLW91dDtcbiAgICAvKlxuICAgIE1lZGlhIFF1ZXJpZXMgYXJlIG5vdCBhZmZlY3RlZCBieSB0aGUgcm9vdCBmb250LXN6aWVcbiAgICBTbyBpZiB1c2VyIGhhcyBkZWZhdWx0IHNpemUgYXMgMjAgdGhlbiAxcmVtIC0gMjBweFxuICAgIFxuICAgIEFsc28sIGJ5IGV4cGVyaW1lbnRhdGlvbiByZW1zIGRvIG5vdCB3b3JrIHZlcnkgd2VsbCBpbiBcbiAgICBhbGwgdGhlIGJyb3dzZXJzIHNvIHdlIHVzZSBlbXMgZm9yIG1lZGlhIHF1ZXJpZXMuXG5cbiAgICBvbmx5IHNjcmVlbiBtYWtlcyBtZWRpYSBxdWVyeSBhcHBseSBvbmx5IHRvIHNjcmVlbnNcbiAgICBzbyBpZiBzb21lb25lIHRyaWVzIHRvIGNvcHkgaXQgb3IgcHJpbnQgaXQgb3V0Li4gdGhleSB3b250IGFwcGx5XG4gICovIH1cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDM3LjZlbSkge1xuICAgICAgLmhlYWRpbmctcHJpbWFyeS0tc3ViIHtcbiAgICAgICAgbGV0dGVyLXNwYWNpbmc6IC43cmVtO1xuICAgICAgICBtYXJnaW4tdG9wOiAxMHJlbTsgfSB9XG5cbi5oZWFkaW5nLXNlY29uZGFyeSB7XG4gIGZvbnQtc2l6ZTogMy41cmVtO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBmb250LXdlaWdodDogNzAwO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIGJhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgIzQ1NjhEQywgI0IwNkFCMyk7XG4gIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0O1xuICBiYWNrZ3JvdW5kLWNsaXA6IHRleHQ7XG4gIGNvbG9yOiB0cmFuc3BhcmVudDtcbiAgbGV0dGVyLXNwYWNpbmc6IDJweDtcbiAgdHJhbnNpdGlvbjogYWxsIC4ycztcbiAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqL1xuICAvKlxuICAgIE1lZGlhIFF1ZXJpZXMgYXJlIG5vdCBhZmZlY3RlZCBieSB0aGUgcm9vdCBmb250LXN6aWVcbiAgICBTbyBpZiB1c2VyIGhhcyBkZWZhdWx0IHNpemUgYXMgMjAgdGhlbiAxcmVtIC0gMjBweFxuICAgIFxuICAgIEFsc28sIGJ5IGV4cGVyaW1lbnRhdGlvbiByZW1zIGRvIG5vdCB3b3JrIHZlcnkgd2VsbCBpbiBcbiAgICBhbGwgdGhlIGJyb3dzZXJzIHNvIHdlIHVzZSBlbXMgZm9yIG1lZGlhIHF1ZXJpZXMuXG5cbiAgICBvbmx5IHNjcmVlbiBtYWtlcyBtZWRpYSBxdWVyeSBhcHBseSBvbmx5IHRvIHNjcmVlbnNcbiAgICBzbyBpZiBzb21lb25lIHRyaWVzIHRvIGNvcHkgaXQgb3IgcHJpbnQgaXQgb3V0Li4gdGhleSB3b250IGFwcGx5XG4gICovIH1cbiAgLmhlYWRpbmctc2Vjb25kYXJ5OmhvdmVyIHtcbiAgICB0cmFuc2Zvcm06IHNrZXdZKDJkZWcpIHNrZXdYKDE1ZGVnKSBzY2FsZSgxLjEpO1xuICAgIHRleHQtc2hhZG93OiAwLjVyZW0gMXJlbSAycmVtIHJnYmEoMCwgMCwgMCwgMC4yKTsgfVxuICAuaGVhZGluZy1zZWNvbmRhcnktd2hpdGUge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgI2ZmZiwgI2ZmZik7IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA1Ni4yNWVtKSB7XG4gICAgLmhlYWRpbmctc2Vjb25kYXJ5IHtcbiAgICAgIGZvbnQtc2l6ZTogM3JlbTsgfSB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogMzcuNmVtKSB7XG4gICAgLmhlYWRpbmctc2Vjb25kYXJ5IHtcbiAgICAgIGZvbnQtc2l6ZTogMi41cmVtOyB9IH1cblxuLnBhcmFncmFwaCB7XG4gIGZvbnQtc2l6ZTogMnJlbTtcbiAgdGV4dC1hbGlnbjoganVzdGlmeTtcbiAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqLyB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTYuMjVlbSkge1xuICAgIC5wYXJhZ3JhcGgge1xuICAgICAgZm9udC1zaXplOiAycmVtOyB9IH1cbiAgLnBhcmFncmFwaDpub3QoOmxhc3QtY2hpbGQpIHtcbiAgICBtYXJnaW4tYm90dG9tOiAzcmVtOyB9XG4gIC5wYXJhZ3JhcGgtd2hpdGUge1xuICAgIG1hcmdpbi10b3A6IDhyZW07XG4gICAgY29sb3I6ICNmZmY7XG4gICAgdGV4dC1hbGlnbjoganVzdGlmeTtcbiAgICAvKlxuICAgIE1lZGlhIFF1ZXJpZXMgYXJlIG5vdCBhZmZlY3RlZCBieSB0aGUgcm9vdCBmb250LXN6aWVcbiAgICBTbyBpZiB1c2VyIGhhcyBkZWZhdWx0IHNpemUgYXMgMjAgdGhlbiAxcmVtIC0gMjBweFxuICAgIFxuICAgIEFsc28sIGJ5IGV4cGVyaW1lbnRhdGlvbiByZW1zIGRvIG5vdCB3b3JrIHZlcnkgd2VsbCBpbiBcbiAgICBhbGwgdGhlIGJyb3dzZXJzIHNvIHdlIHVzZSBlbXMgZm9yIG1lZGlhIHF1ZXJpZXMuXG5cbiAgICBvbmx5IHNjcmVlbiBtYWtlcyBtZWRpYSBxdWVyeSBhcHBseSBvbmx5IHRvIHNjcmVlbnNcbiAgICBzbyBpZiBzb21lb25lIHRyaWVzIHRvIGNvcHkgaXQgb3IgcHJpbnQgaXQgb3V0Li4gdGhleSB3b250IGFwcGx5XG4gICovIH1cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICAgIC5wYXJhZ3JhcGgtd2hpdGUge1xuICAgICAgICBtYXJnaW4tdG9wOiAzcmVtOyB9IH1cblxuLnUtY2VudGVyLXRleHQge1xuICB0ZXh0LWFsaWduOiBjZW50ZXIgIWltcG9ydGFudDsgfVxuXG4udS1tYXJnaW4tYm90dG9tLWJpZyB7XG4gIG1hcmdpbi1ib3R0b206IDhyZW0gIWltcG9ydGFudDtcbiAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqLyB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTYuMjVlbSkge1xuICAgIC51LW1hcmdpbi1ib3R0b20tYmlnIHtcbiAgICAgIG1hcmdpbi1ib3R0b206IDVyZW0gIWltcG9ydGFudDsgfSB9XG5cbi51LW1hcmdpbi1ib3R0b20tbWVkaXVtIHtcbiAgbWFyZ2luLWJvdHRvbTogNHJlbSAhaW1wb3J0YW50O1xuICAvKlxuICAgIE1lZGlhIFF1ZXJpZXMgYXJlIG5vdCBhZmZlY3RlZCBieSB0aGUgcm9vdCBmb250LXN6aWVcbiAgICBTbyBpZiB1c2VyIGhhcyBkZWZhdWx0IHNpemUgYXMgMjAgdGhlbiAxcmVtIC0gMjBweFxuICAgIFxuICAgIEFsc28sIGJ5IGV4cGVyaW1lbnRhdGlvbiByZW1zIGRvIG5vdCB3b3JrIHZlcnkgd2VsbCBpbiBcbiAgICBhbGwgdGhlIGJyb3dzZXJzIHNvIHdlIHVzZSBlbXMgZm9yIG1lZGlhIHF1ZXJpZXMuXG5cbiAgICBvbmx5IHNjcmVlbiBtYWtlcyBtZWRpYSBxdWVyeSBhcHBseSBvbmx5IHRvIHNjcmVlbnNcbiAgICBzbyBpZiBzb21lb25lIHRyaWVzIHRvIGNvcHkgaXQgb3IgcHJpbnQgaXQgb3V0Li4gdGhleSB3b250IGFwcGx5XG4gICovIH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA1Ni4yNWVtKSB7XG4gICAgLnUtbWFyZ2luLWJvdHRvbS1tZWRpdW0ge1xuICAgICAgbWFyZ2luLWJvdHRvbTogM3JlbSAhaW1wb3J0YW50OyB9IH1cblxuLnUtbWFyZ2luLWJvdHRvbS1zbWFsbCB7XG4gIG1hcmdpbi1ib3R0b206IDEuNXJlbSAhaW1wb3J0YW50OyB9XG5cbi51LW1hcmdpbi10b3AtaHVnZSB7XG4gIG1hcmdpbi1ib3R0b206IDEwcmVtICFpbXBvcnRhbnQ7IH1cblxuLnUtbWFyZ2luLXRvcC1iaWcge1xuICBtYXJnaW4tYm90dG9tOiA4cmVtICFpbXBvcnRhbnQ7IH1cblxuLnUtbWFyZ2luLXJpZ2h0LXNtYWxsIHtcbiAgbWFyZ2luLXJpZ2h0OiAycmVtICFpbXBvcnRhbnQ7IH1cblxuLmNvbXBvc2l0aW9uIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBtYXJnaW4tdG9wOiA1cmVtOyB9XG4gIC5jb21wb3NpdGlvbl9fcGhvdG8ge1xuICAgIHdpZHRoOiA2MCU7XG4gICAgYm94LXNoYWRvdzogMCAxLjVyZW0gNHJlbSByZ2JhKDAsIDAsIDAsIDAuNCk7XG4gICAgYm9yZGVyLXJhZGl1czogMnB4O1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB6LWluZGV4OiAxMDtcbiAgICB0cmFuc2l0aW9uOiBhbGwgLjJzO1xuICAgIG91dGxpbmUtb2Zmc2V0OiAycmVtO1xuICAgIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTYuMjVlbSkge1xuICAgICAgLmNvbXBvc2l0aW9uX19waG90byB7XG4gICAgICAgIG1hcmdpbi10b3A6IDVyZW07XG4gICAgICAgIGZsb2F0OiBsZWZ0O1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIHdpZHRoOiAzMy4zMzMzMyU7XG4gICAgICAgIGJveC1zaGFkb3c6IDAgMS41cmVtIDNyZW0gcmdiYSgwLCAwLCAwLCAwLjIpOyB9IH1cbiAgICAuY29tcG9zaXRpb25fX3Bob3RvLS1wMSB7XG4gICAgICBsZWZ0OiAxMCU7XG4gICAgICB0b3A6IC0ycmVtO1xuICAgICAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqLyB9XG4gICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICAgICAgLmNvbXBvc2l0aW9uX19waG90by0tcDEge1xuICAgICAgICAgIHRvcDogMDtcbiAgICAgICAgICB0cmFuc2Zvcm06IHNjYWxlKDEuNSk7IH0gfVxuICAgIC5jb21wb3NpdGlvbl9fcGhvdG8tLXAyIHtcbiAgICAgIGxlZnQ6IDUwJTtcbiAgICAgIHRvcDogMnJlbTtcbiAgICAgIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA1Ni4yNWVtKSB7XG4gICAgICAgIC5jb21wb3NpdGlvbl9fcGhvdG8tLXAyIHtcbiAgICAgICAgICBsZWZ0OiAwO1xuICAgICAgICAgIHRvcDogLTFyZW07XG4gICAgICAgICAgdHJhbnNmb3JtOiBzY2FsZSgxLjYpO1xuICAgICAgICAgIHotaW5kZXg6IDEwMDsgfSB9XG4gICAgLmNvbXBvc2l0aW9uX19waG90by0tcDMge1xuICAgICAgbGVmdDogMjUlO1xuICAgICAgdG9wOiA1cmVtO1xuICAgICAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqLyB9XG4gICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICAgICAgLmNvbXBvc2l0aW9uX19waG90by0tcDMge1xuICAgICAgICAgIGxlZnQ6IC0xcmVtO1xuICAgICAgICAgIHRvcDogMDtcbiAgICAgICAgICB0cmFuc2Zvcm06IHNjYWxlKDEuNCk7IH0gfVxuICAgIC5jb21wb3NpdGlvbl9fcGhvdG86aG92ZXIge1xuICAgICAgb3V0bGluZTogMS41cmVtIHNvbGlkICNCMDZBQjM7XG4gICAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMDUpIHRyYW5zbGF0ZVkoLTAuNXJlbSk7XG4gICAgICBib3gtc2hhZG93OiAwLCAyLjVyZW0gNHJlbSByZ2JhKDAsIDAsIDAsIDAuNSk7XG4gICAgICB6LWluZGV4OiAyMDsgfVxuICAuY29tcG9zaXRpb246aG92ZXIgLmNvbXBvc2l0aW9uX19waG90bzpub3QoOmhvdmVyKSB7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgwLjk1KTsgfVxuXG4ucGhvbmUtaW1nIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDUwcmVtOyB9XG4gIC5waG9uZS1pbWdfX2lwaG9uZSB7XG4gICAgaGVpZ2h0OiA1MHJlbTtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpOyB9XG5cbi5kb3dubG9hZC1pbWFnZXMge1xuICBtYXJnaW4tdG9wOiA3cmVtO1xuICBoZWlnaHQ6IDUwcmVtOyB9XG4gIC5kb3dubG9hZC1pbWFnZXNfX3FyIHtcbiAgICBtYXJnaW4tbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTsgfVxuICAuZG93bmxvYWQtaW1hZ2VzX19tb2JpbGUge1xuICAgIG1hcmdpbi1sZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xuICAgIGhlaWdodDogMzAlO1xuICAgIG1hcmdpbi10b3A6IDhyZW07IH1cblxuLmJ0biwgLmJ0bjpsaW5rLCAuYnRuOnZpc2l0ZWQge1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIHBhZGRpbmc6IDEuNXJlbSA0cmVtO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIGJvcmRlci1yYWRpdXM6IDEwcmVtO1xuICB0cmFuc2l0aW9uOiBhbGwgLjJzO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGZvbnQtc2l6ZTogMS42cmVtO1xuICBib3JkZXI6IG5vbmU7XG4gIGN1cnNvcjogcG9pbnRlcjsgfVxuXG4uYnRuOmhvdmVyIHtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0zcHgpO1xuICBib3gtc2hhZG93OiAwIDFyZW0gMnJlbSByZ2JhKDAsIDAsIDAsIDAuMik7IH1cbiAgLmJ0bjpob3Zlcjo6YWZ0ZXIge1xuICAgIHRyYW5zZm9ybTogc2NhbGVYKDEuNCkgc2NhbGVZKDEuNik7XG4gICAgb3BhY2l0eTogMDsgfVxuXG4uYnRuOmFjdGl2ZSwgLmJ0bjpmb2N1cyB7XG4gIG91dGxpbmU6IG5vbmU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtMXB4KTtcbiAgYm94LXNoYWRvdzogMCAwLjVyZW0gMXJlbSByZ2JhKDAsIDAsIDAsIDAuMik7IH1cblxuLmJ0bi0td2hpdGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBjb2xvcjogIzc3NzsgfVxuICAuYnRuLS13aGl0ZTo6YWZ0ZXIge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7IH1cblxuLmJ0bi0tZ3JlZW4ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjYzMxNDMyO1xuICBjb2xvcjogI2ZmZjsgfVxuICAuYnRuLS1ncmVlbjo6YWZ0ZXIge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNjMzE0MzI7IH1cblxuLmJ0bjo6YWZ0ZXIge1xuICBjb250ZW50OiBcIlwiO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG4gIGJvcmRlci1yYWRpdXM6IDEwcmVtO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgei1pbmRleDogLTE7XG4gIHRyYW5zaXRpb246IGFsbCAuNHM7IH1cblxuLmJ0bi0tYW5pbWF0ZWQge1xuICBhbmltYXRpb246IG1vdmVJbkJvdHRvbSAuNXMgZWFzZS1vdXQgLjc1cztcbiAgYW5pbWF0aW9uLWZpbGwtbW9kZTogYmFja3dhcmRzOyB9XG5cbi5idG4tdGV4dDpsaW5rLCAuYnRuLXRleHQ6dmlzaXRlZCB7XG4gIGZvbnQtc2l6ZTogMS42cmVtO1xuICBjb2xvcjogI2MzMTQzMjtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjYzMxNDMyO1xuICBwYWRkaW5nOiAzcHg7XG4gIHRyYW5zaXRpb246IGFsbCAuMnM7IH1cblxuLmJ0bi10ZXh0OmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2MzMTQzMjtcbiAgY29sb3I6ICNmZmY7XG4gIGJveC1zaGFkb3c6IDAgMXJlbSAycmVtIHJnYmEoMCwgMCwgMCwgMC4xNSk7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtMnB4KTsgfVxuXG4uYnRuLXRleHQ6YWN0aXZlIHtcbiAgYm94LXNoYWRvdzogMCAwLjVyZW0gMXJlbSByZ2JhKDAsIDAsIDAsIDAuMTUpO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCk7IH1cblxuLmNvbnRhY3QtaW5mbyB7XG4gIG1hcmdpbi10b3A6IDVyZW07XG4gIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICAuY29udGFjdC1pbmZvIHtcbiAgICAgIG1hcmdpbi10b3A6IDFyZW07IH0gfVxuICAuY29udGFjdC1pbmZvX19pY29uLCAuY29udGFjdC1pbmZvX19pY29uOmxpbmssIC5jb250YWN0LWluZm9fX2ljb246dmlzaXRlZCB7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgIHBhZGRpbmc6IDEuNXJlbSA0cmVtO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIGZvbnQtc2l6ZTogM3JlbTtcbiAgICB0cmFuc2l0aW9uOiBhbGwgLjJzO1xuICAgIGNvbG9yOiB0cmFuc3BhcmVudDtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICM0NTY4REMsICNCMDZBQjMpO1xuICAgIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0O1xuICAgIGJhY2tncm91bmQtY2xpcDogdGV4dDtcbiAgICAvKlxuICAgIE1lZGlhIFF1ZXJpZXMgYXJlIG5vdCBhZmZlY3RlZCBieSB0aGUgcm9vdCBmb250LXN6aWVcbiAgICBTbyBpZiB1c2VyIGhhcyBkZWZhdWx0IHNpemUgYXMgMjAgdGhlbiAxcmVtIC0gMjBweFxuICAgIFxuICAgIEFsc28sIGJ5IGV4cGVyaW1lbnRhdGlvbiByZW1zIGRvIG5vdCB3b3JrIHZlcnkgd2VsbCBpbiBcbiAgICBhbGwgdGhlIGJyb3dzZXJzIHNvIHdlIHVzZSBlbXMgZm9yIG1lZGlhIHF1ZXJpZXMuXG5cbiAgICBvbmx5IHNjcmVlbiBtYWtlcyBtZWRpYSBxdWVyeSBhcHBseSBvbmx5IHRvIHNjcmVlbnNcbiAgICBzbyBpZiBzb21lb25lIHRyaWVzIHRvIGNvcHkgaXQgb3IgcHJpbnQgaXQgb3V0Li4gdGhleSB3b250IGFwcGx5XG4gICovXG4gICAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqLyB9XG4gICAgLmNvbnRhY3QtaW5mb19faWNvbiBzcGFuLCAuY29udGFjdC1pbmZvX19pY29uOmxpbmsgc3BhbiwgLmNvbnRhY3QtaW5mb19faWNvbjp2aXNpdGVkIHNwYW4ge1xuICAgICAgY29sb3I6IHJlZDsgfVxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTYuMjVlbSkge1xuICAgICAgLmNvbnRhY3QtaW5mb19faWNvbiwgLmNvbnRhY3QtaW5mb19faWNvbjpsaW5rLCAuY29udGFjdC1pbmZvX19pY29uOnZpc2l0ZWQge1xuICAgICAgICBwYWRkaW5nOiAxcmVtIDA7XG4gICAgICAgIGZvbnQtc2l6ZTogMi41cmVtOyB9IH1cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDM3LjZlbSkge1xuICAgICAgLmNvbnRhY3QtaW5mb19faWNvbiwgLmNvbnRhY3QtaW5mb19faWNvbjpsaW5rLCAuY29udGFjdC1pbmZvX19pY29uOnZpc2l0ZWQge1xuICAgICAgICBwYWRkaW5nOiAuNXJlbSAwO1xuICAgICAgICBmb250LXNpemU6IDJyZW07IH0gfVxuICAuY29udGFjdC1pbmZvX19pY29uOmhvdmVyIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtNWRlZyk7IH1cblxuLmZhLWdyYWRpZW50IHtcbiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCAjNDU2OERDLCAjQjA2QUIzKTtcbiAgLXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6IHRleHQ7XG4gIGJhY2tncm91bmQtY2xpcDogdGV4dDtcbiAgLXdlYmtpdC10ZXh0LWZpbGwtY29sb3I6IHRyYW5zcGFyZW50OyB9XG5cbi5pZnJhbWUge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiA1MHJlbTtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgYm9yZGVyOiAzcHggc29saWQgb3JhbmdlcmVkO1xuICBib3JkZXItcmFkaXVzOiAxcHg7IH1cblxuLmhlYWRlciB7XG4gIGhlaWdodDogODV2aDtcbiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0IGJvdHRvbSwgcmdiYSgxOTUsIDIwLCA1MCwgMC44KSwgcmdiYSgzNiwgMTEsIDU0LCAwLjgpKSwgdXJsKFwiLi4vaW1nL21haW4taW1nLXNtYWxsLmpwZ1wiKTtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogdG9wO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICBAc3VwcG9ydHMgKGNsaXAtcGF0aDogcG9seWdvbigwIDApKSBvciAoLXdlYmtpdC1jbGlwLXBhdGg6IHBvbHlnb24oMCAwKSkge1xuICAgIC5oZWFkZXIge1xuICAgICAgLXdlYmtpdC1jbGlwLXBhdGg6IHBvbHlnb24oMCAwLCAxMDAlIDAsIDEwMCUgODV2aCwgMCAxMDAlKTtcbiAgICAgIGNsaXAtcGF0aDogcG9seWdvbigwIDAsIDEwMCUgMCwgMTAwJSA4NXZoLCAwIDEwMCUpO1xuICAgICAgaGVpZ2h0OiA5NXZoOyB9IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWluLXJlc29sdXRpb246IDE5MmRwaSkgYW5kIChtaW4td2lkdGg6IDM3LjVlbSksIG9ubHkgc2NyZWVuIGFuZCAoLXdlYmtpdC1taW4tZGV2aWNlLXBpeGVsLXJhdGlvOiAyKSBhbmQgKG1pbi13aWR0aDogMzcuNWVtKSwgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDEyNWVtKSB7XG4gICAgLmhlYWRlciB7XG4gICAgICBiYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQgYm90dG9tLCByZ2JhKDE5NSwgMjAsIDUwLCAwLjgpLCByZ2JhKDM2LCAxMSwgNTQsIDAuOCkpLCB1cmwoXCIuLi9pbWcvbWFpbi1pbWcuanBnXCIpOyB9IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAzNy42ZW0pIHtcbiAgICAuaGVhZGVyIHtcbiAgICAgIC13ZWJraXQtY2xpcC1wYXRoOiBwb2x5Z29uKDAgMCwgMTAwJSAwLCAxMDAlIDkwdmgsIDAgMTAwJSk7XG4gICAgICBjbGlwLXBhdGg6IHBvbHlnb24oMCAwLCAxMDAlIDAsIDEwMCUgOTB2aCwgMCAxMDAlKTsgfSB9XG4gIC5oZWFkZXJfX2xvZ28tYm94IHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA0cmVtO1xuICAgIGxlZnQ6IDRyZW07IH1cbiAgLmhlYWRlcl9fbG9nbyB7XG4gICAgaGVpZ2h0OiAxMHJlbTsgfVxuICAuaGVhZGVyX190ZXh0LWJveCB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogNDUlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7IH1cblxuLnJvdyB7XG4gIG1heC13aWR0aDogMTE0cmVtO1xuICBtYXJnaW46IDAgYXV0bztcbiAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqLyB9XG4gIC5yb3c6bm90KDpsYXN0LWNoaWxkKSB7XG4gICAgbWFyZ2luLWJvdHRvbTogOHJlbTsgfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICAucm93IHtcbiAgICAgIG1heC13aWR0aDogODByZW07XG4gICAgICBwYWRkaW5nOiAwIDNyZW07IH0gfVxuICAucm93OmFmdGVyIHtcbiAgICBjb250ZW50OiBcIlwiO1xuICAgIGRpc3BsYXk6IHRhYmxlO1xuICAgIGNsZWFyOiBib3RoOyB9XG4gIC5yb3cgW2NsYXNzXj1cImNvbC1cIl0ge1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICAgIC5yb3cgW2NsYXNzXj1cImNvbC1cIl06bm90KDpsYXN0LWNoaWxkKSB7XG4gICAgICBtYXJnaW4tcmlnaHQ6IDZyZW07XG4gICAgICAvKlxuICAgIE1lZGlhIFF1ZXJpZXMgYXJlIG5vdCBhZmZlY3RlZCBieSB0aGUgcm9vdCBmb250LXN6aWVcbiAgICBTbyBpZiB1c2VyIGhhcyBkZWZhdWx0IHNpemUgYXMgMjAgdGhlbiAxcmVtIC0gMjBweFxuICAgIFxuICAgIEFsc28sIGJ5IGV4cGVyaW1lbnRhdGlvbiByZW1zIGRvIG5vdCB3b3JrIHZlcnkgd2VsbCBpbiBcbiAgICBhbGwgdGhlIGJyb3dzZXJzIHNvIHdlIHVzZSBlbXMgZm9yIG1lZGlhIHF1ZXJpZXMuXG5cbiAgICBvbmx5IHNjcmVlbiBtYWtlcyBtZWRpYSBxdWVyeSBhcHBseSBvbmx5IHRvIHNjcmVlbnNcbiAgICBzbyBpZiBzb21lb25lIHRyaWVzIHRvIGNvcHkgaXQgb3IgcHJpbnQgaXQgb3V0Li4gdGhleSB3b250IGFwcGx5XG4gICovIH1cbiAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTYuMjVlbSkge1xuICAgICAgICAucm93IFtjbGFzc149XCJjb2wtXCJdOm5vdCg6bGFzdC1jaGlsZCkge1xuICAgICAgICAgIG1hcmdpbi1yaWdodDogMDtcbiAgICAgICAgICBtYXJnaW4tYm90dG9tOiA2cmVtOyB9IH1cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICAgIC5yb3cgW2NsYXNzXj1cImNvbC1cIl0ge1xuICAgICAgICB3aWR0aDogMTAwJSAhaW1wb3J0YW50OyB9IH1cbiAgLnJvdyAuY29sLTEtb2YtMiB7XG4gICAgd2lkdGg6IGNhbGMoKDEwMCUgLSA2cmVtKSAvIDIpOyB9XG4gIC5yb3cgLmNvbC0xLW9mLTMge1xuICAgIHdpZHRoOiBjYWxjKCgxMDAlIC0gMiAqIDZyZW0pIC8gMyk7IH1cbiAgLnJvdyAuY29sLTItb2YtMyB7XG4gICAgd2lkdGg6IGNhbGMoMiAqICgoMTAwJSAtIDIgKiA2cmVtKSAvIDMpICsgNnJlbSk7IH1cbiAgLnJvdyAuY29sLTEtb2YtNCB7XG4gICAgd2lkdGg6IGNhbGMoKDEwMCUgLSAzICogNnJlbSkgLyA0KTsgfVxuICAucm93IC5jb2wtMi1vZi00IHtcbiAgICB3aWR0aDogY2FsYygyICogKCgxMDAlIC0gMyAqIDZyZW0pIC8gNCkgKyA2cmVtKTsgfVxuICAucm93IC5jb2wtMy1vZi00IHtcbiAgICB3aWR0aDogY2FsYygzICogKCgxMDAlIC0gMyAqIDZyZW0pIC8gNCkgKyAyICogNnJlbSk7IH1cblxuLm5hdmlnYXRpb25fX2NoZWNrYm94IHtcbiAgZGlzcGxheTogbm9uZTsgfVxuXG4ubmF2aWdhdGlvbl9fYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgaGVpZ2h0OiA3cmVtO1xuICB3aWR0aDogN3JlbTtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogNnJlbTtcbiAgcmlnaHQ6IDZyZW07XG4gIHotaW5kZXg6IDIwMDA7XG4gIGJveC1zaGFkb3c6IDAgMXJlbSAzcmVtIHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi9cbiAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqLyB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTYuMjVlbSkge1xuICAgIC5uYXZpZ2F0aW9uX19idXR0b24ge1xuICAgICAgdG9wOiAzcmVtO1xuICAgICAgcmlnaHQ6IDNyZW07IH0gfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDM3LjZlbSkge1xuICAgIC5uYXZpZ2F0aW9uX19idXR0b24ge1xuICAgICAgdG9wOiAzcmVtO1xuICAgICAgcmlnaHQ6IDNyZW07IH0gfVxuXG4ubmF2aWdhdGlvbl9fYmFja2dyb3VuZCB7XG4gIGhlaWdodDogNnJlbTtcbiAgd2lkdGg6IDZyZW07XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB0b3A6IDYuNXJlbTtcbiAgcmlnaHQ6IDYuNXJlbTtcbiAgYmFja2dyb3VuZC1pbWFnZTogcmFkaWFsLWdyYWRpZW50KCNjMzE0MzIsICM0NTY4REMpO1xuICB6LWluZGV4OiAxMDAwO1xuICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC44cyBjdWJpYy1iZXppZXIoMC44NiwgMCwgMC4wNywgMSk7XG4gIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi9cbiAgLypcbiAgICBNZWRpYSBRdWVyaWVzIGFyZSBub3QgYWZmZWN0ZWQgYnkgdGhlIHJvb3QgZm9udC1zemllXG4gICAgU28gaWYgdXNlciBoYXMgZGVmYXVsdCBzaXplIGFzIDIwIHRoZW4gMXJlbSAtIDIwcHhcbiAgICBcbiAgICBBbHNvLCBieSBleHBlcmltZW50YXRpb24gcmVtcyBkbyBub3Qgd29yayB2ZXJ5IHdlbGwgaW4gXG4gICAgYWxsIHRoZSBicm93c2VycyBzbyB3ZSB1c2UgZW1zIGZvciBtZWRpYSBxdWVyaWVzLlxuXG4gICAgb25seSBzY3JlZW4gbWFrZXMgbWVkaWEgcXVlcnkgYXBwbHkgb25seSB0byBzY3JlZW5zXG4gICAgc28gaWYgc29tZW9uZSB0cmllcyB0byBjb3B5IGl0IG9yIHByaW50IGl0IG91dC4uIHRoZXkgd29udCBhcHBseVxuICAqLyB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTYuMjVlbSkge1xuICAgIC5uYXZpZ2F0aW9uX19iYWNrZ3JvdW5kIHtcbiAgICAgIHRvcDogNHJlbTtcbiAgICAgIHJpZ2h0OiA0cmVtOyB9IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAzNy42ZW0pIHtcbiAgICAubmF2aWdhdGlvbl9fYmFja2dyb3VuZCB7XG4gICAgICB0b3A6IDMuNXJlbTtcbiAgICAgIHJpZ2h0OiAzLjVyZW07IH0gfVxuXG4ubmF2aWdhdGlvbl9fbGluazpsaW5rLCAubmF2aWdhdGlvbl9fbGluazp2aXNpdGVkIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBmb250LXNpemU6IDNyZW07XG4gIGZvbnQtd2VpZ2h0OiAzMDA7XG4gIGNvbG9yOiAjZmZmO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIHBhZGRpbmc6IDFyZW0gMnJlbTtcbiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KDEyMGRlZywgdHJhbnNwYXJlbnQgMCUsIHRyYW5zcGFyZW50IDUwJSwgI2ZmZiA1MCUpO1xuICBiYWNrZ3JvdW5kLXNpemU6IDI1MCU7XG4gIHRyYW5zaXRpb246IGFsbCAuNHM7IH1cbiAgLm5hdmlnYXRpb25fX2xpbms6bGluayBzcGFuLCAubmF2aWdhdGlvbl9fbGluazp2aXNpdGVkIHNwYW4ge1xuICAgIG1hcmdpbi1yaWdodDogMS41cmVtO1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jazsgfVxuXG4ubmF2aWdhdGlvbl9fbGluazpob3ZlciwgLm5hdmlnYXRpb25fX2xpbms6YWN0aXZlIHtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogMTAwJTtcbiAgY29sb3I6ICM0NTY4REM7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgxcmVtKTsgfVxuXG4ubmF2aWdhdGlvbl9fbmF2IHtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHotaW5kZXg6IDE1MDA7XG4gIG9wYWNpdHk6IDA7XG4gIHZpc2liaWxpdHk6IGhpZGRlbjtcbiAgd2lkdGg6IDA7XG4gIHRyYW5zaXRpb246IGFsbCAwLjhzIGN1YmljLWJlemllcigwLjYsIC0wLjU1LCAwLjI2NSwgMS41NSk7IH1cblxuLm5hdmlnYXRpb25fX2xpc3Qge1xuICBsaXN0LXN0eWxlOiBub25lO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogNTAlO1xuICBsZWZ0OiA1MCU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlOyB9XG5cbi5uYXZpZ2F0aW9uX19pdGVtIHtcbiAgbWFyZ2luOiAxcmVtOyB9XG5cbi5uYXZpZ2F0aW9uX19jaGVja2JveDpjaGVja2VkIH4gLm5hdmlnYXRpb25fX2JhY2tncm91bmQge1xuICB0cmFuc2Zvcm06IHNjYWxlKDcwKTsgfVxuXG4ubmF2aWdhdGlvbl9fY2hlY2tib3g6Y2hlY2tlZCB+IC5uYXZpZ2F0aW9uX19uYXYge1xuICBvcGFjaXR5OiAxO1xuICB3aWR0aDogMTAwJTtcbiAgdmlzaWJpbGl0eTogdmlzaWJsZTsgfVxuXG4ubmF2aWdhdGlvbl9faWNvbiB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbWFyZ2luLXRvcDogMy4zcmVtOyB9XG4gIC5uYXZpZ2F0aW9uX19pY29uLCAubmF2aWdhdGlvbl9faWNvbjo6YmVmb3JlLCAubmF2aWdhdGlvbl9faWNvbjo6YWZ0ZXIge1xuICAgIHdpZHRoOiAzcmVtO1xuICAgIGhlaWdodDogMnB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMzMzM7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrOyB9XG4gIC5uYXZpZ2F0aW9uX19pY29uOjpiZWZvcmUsIC5uYXZpZ2F0aW9uX19pY29uOjphZnRlciB7XG4gICAgY29udGVudDogXCJcIjtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgbGVmdDogMDtcbiAgICB0cmFuc2l0aW9uOiBhbGwgLjJzOyB9XG4gIC5uYXZpZ2F0aW9uX19pY29uOjpiZWZvcmUge1xuICAgIHRvcDogLS44cmVtOyB9XG4gIC5uYXZpZ2F0aW9uX19pY29uOjphZnRlciB7XG4gICAgdG9wOiAuOHJlbTsgfVxuXG4ubmF2aWdhdGlvbl9fYnV0dG9uOmhvdmVyIC5uYXZpZ2F0aW9uX19pY29uOmJlZm9yZSB7XG4gIHRvcDogLTFyZW07IH1cblxuLm5hdmlnYXRpb25fX2J1dHRvbjpob3ZlciAubmF2aWdhdGlvbl9faWNvbjphZnRlciB7XG4gIHRvcDogMXJlbTsgfVxuXG4ubmF2aWdhdGlvbl9fY2hlY2tib3g6Y2hlY2tlZCB+IC5uYXZpZ2F0aW9uX19idXR0b24gLm5hdmlnYXRpb25fX2ljb24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsgfVxuXG4ubmF2aWdhdGlvbl9fY2hlY2tib3g6Y2hlY2tlZCB+IC5uYXZpZ2F0aW9uX19idXR0b24gLm5hdmlnYXRpb25fX2ljb246OmJlZm9yZSB7XG4gIHRvcDogMDtcbiAgdHJhbnNmb3JtOiByb3RhdGUoMTM1ZGVnKTsgfVxuXG4ubmF2aWdhdGlvbl9fY2hlY2tib3g6Y2hlY2tlZCB+IC5uYXZpZ2F0aW9uX19idXR0b24gLm5hdmlnYXRpb25fX2ljb246OmFmdGVyIHtcbiAgdG9wOiAwO1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgtMTM1ZGVnKTsgfVxuXG4uZm9vdGVyX190ZXh0IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzFGMUYxRjtcbiAgcGFkZGluZzogMXJlbSAwO1xuICBtYXJnaW46IDAgLTNyZW07XG4gIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICAuZm9vdGVyX190ZXh0IHtcbiAgICAgIG1hcmdpbjogMCAwOyB9IH1cbiAgLmZvb3Rlcl9fdGV4dCBwIHtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGZvbnQtc2l6ZTogMS4zcmVtOyB9XG5cbi5mb290ZXJfX2xpbmssIC5mb290ZXJfX2xpbms6dmlzaXRlZCwgLmZvb3Rlcl9fbGluazpsaW5rIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lIHVuZGVybGluZTtcbiAgZm9udC13ZWlnaHQ6IGJvbGRlcjtcbiAgY29sb3I6IHdoaXRlOyB9XG5cbi5zZWN0aW9uLWFib3V0IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y3ZjdmNztcbiAgcGFkZGluZzogMjVyZW0gMDtcbiAgbWFyZ2luLXRvcDogLTIwdmg7XG4gIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICAuc2VjdGlvbi1hYm91dCB7XG4gICAgICBwYWRkaW5nOiAyMHJlbSAwOyB9IH1cblxuLnNlY3Rpb24tZXhwbG9yZSB7XG4gIHBhZGRpbmc6IDEwcmVtIDA7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmN2Y3Zjc7XG4gIGJhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCBib3R0b20sIHJnYmEoMTk1LCAyMCwgNTAsIDAuOCksIHJnYmEoMzYsIDExLCA1NCwgMC44KSksIHVybChcIi4uL2ltZy9leHBsb3JlLWJnLWltZy5qcGdcIik7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIHRyYW5zZm9ybTogc2tld1koLTVkZWcpO1xuICAvKlxuICAgIE1lZGlhIFF1ZXJpZXMgYXJlIG5vdCBhZmZlY3RlZCBieSB0aGUgcm9vdCBmb250LXN6aWVcbiAgICBTbyBpZiB1c2VyIGhhcyBkZWZhdWx0IHNpemUgYXMgMjAgdGhlbiAxcmVtIC0gMjBweFxuICAgIFxuICAgIEFsc28sIGJ5IGV4cGVyaW1lbnRhdGlvbiByZW1zIGRvIG5vdCB3b3JrIHZlcnkgd2VsbCBpbiBcbiAgICBhbGwgdGhlIGJyb3dzZXJzIHNvIHdlIHVzZSBlbXMgZm9yIG1lZGlhIHF1ZXJpZXMuXG5cbiAgICBvbmx5IHNjcmVlbiBtYWtlcyBtZWRpYSBxdWVyeSBhcHBseSBvbmx5IHRvIHNjcmVlbnNcbiAgICBzbyBpZiBzb21lb25lIHRyaWVzIHRvIGNvcHkgaXQgb3IgcHJpbnQgaXQgb3V0Li4gdGhleSB3b250IGFwcGx5XG4gICovIH1cbiAgLnNlY3Rpb24tZXhwbG9yZSA+ICoge1xuICAgIHRyYW5zZm9ybTogc2tld1koNWRlZyk7IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA1Ni4yNWVtKSB7XG4gICAgLnNlY3Rpb24tZXhwbG9yZSB7XG4gICAgICBwYWRkaW5nOiA1cmVtIDA7IH0gfVxuXG4uc2VjdGlvbi1yZWFjaC11cyB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmN2Y3Zjc7XG4gIHBhZGRpbmc6IDEwcmVtIDA7XG4gIC8qXG4gICAgTWVkaWEgUXVlcmllcyBhcmUgbm90IGFmZmVjdGVkIGJ5IHRoZSByb290IGZvbnQtc3ppZVxuICAgIFNvIGlmIHVzZXIgaGFzIGRlZmF1bHQgc2l6ZSBhcyAyMCB0aGVuIDFyZW0gLSAyMHB4XG4gICAgXG4gICAgQWxzbywgYnkgZXhwZXJpbWVudGF0aW9uIHJlbXMgZG8gbm90IHdvcmsgdmVyeSB3ZWxsIGluIFxuICAgIGFsbCB0aGUgYnJvd3NlcnMgc28gd2UgdXNlIGVtcyBmb3IgbWVkaWEgcXVlcmllcy5cblxuICAgIG9ubHkgc2NyZWVuIG1ha2VzIG1lZGlhIHF1ZXJ5IGFwcGx5IG9ubHkgdG8gc2NyZWVuc1xuICAgIHNvIGlmIHNvbWVvbmUgdHJpZXMgdG8gY29weSBpdCBvciBwcmludCBpdCBvdXQuLiB0aGV5IHdvbnQgYXBwbHlcbiAgKi8gfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU2LjI1ZW0pIHtcbiAgICAuc2VjdGlvbi1yZWFjaC11cyB7XG4gICAgICBwYWRkaW5nOiA1cmVtIDA7IH0gfVxuXG4uc2VjdGlvbi1zbGlkZXNob3cge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjdmN2Y3OyB9XG5cbi5sb2dvX2NvbnRhaW5lciB7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IDAgYXV0bztcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IH1cbiAgLmxvZ29fY29udGFpbmVyX192c21fc2FyZWVzX2xvZ28ge1xuICAgIHdpZHRoOiAyNXJlbTsgfVxuICAubG9nb19jb250YWluZXJfX29tamluX2xvZ28ge1xuICAgIHdpZHRoOiAyNXJlbTsgfVxuIl19 */
